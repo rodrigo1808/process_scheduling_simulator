@@ -5,7 +5,7 @@
 
 /* constante com o tamanho da tabela de processos 
     (o maximo que ele suporta em numero de processos) */
-#define PROCESS_TABLE_SIZE 20
+#define PROCESS_TABLE_SIZE 200
 
 /* constantes com a duração de cada um dos tipos de IO */
 #define DISK_IO_DURATION 5
