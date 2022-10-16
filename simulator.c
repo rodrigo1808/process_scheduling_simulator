@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 
 /* constante com o tamanho da tabela de processos
     (o maximo que ele suporta em numero de processos) */
@@ -29,7 +30,7 @@
 #define BLOCKED_STATUS "blocked"
 
 /* constantes para o trabalho do escalonador */
-#define QUEUE_SIZE 10
+#define QUEUE_SIZE 20
 #define QUEUES_NUMBER 3
 #define QUANTUM 5
 
@@ -38,8 +39,10 @@
 
 /* struct de io que o processo precisa para pedir vários */
 typedef struct {
+    char type[10];                       // tipo de io
     int duration;                       // duração do io
     int req_instant;                    // instante que o processo pede io a partir de seu inicio
+    int current_time;
 } Io;
 
 /* struct com as informações do processo, ou PCB */
@@ -52,6 +55,7 @@ typedef struct {
     int current_time;                   // tempo de serviço executado ate o momento
     Io io[MAX_IO_REQ];                  // ios pedidos pelo processo
     int io_req_quantity;                // variavel auxiliar para quantificar os ios
+    int io_req_remaining;
 } Process;
 
 /* struct para construir a estrutura de dados das filas */
@@ -84,20 +88,44 @@ void destroyProcess(Process process);
 
 int generateRandomNumber(int lower_limit, int upper_limit);
 void generateProcessesRandomly();
+void runCPU();
+Io shouldRunIo();
+void runIOs();
+void run_disk();
+void run_printer();
+void run_tape();
 
 ProcessTable table;
-ProcessQueue ready_queue, execution_queue, blocked_queue, feedback_queue[QUEUES_NUMBER];
+ProcessQueue feedback_queue[QUEUES_NUMBER];
+
 Process cpu_running;
+
+ProcessQueue disk_queue;
+ProcessQueue printer_queue;
+ProcessQueue tape_queue;
+
+Process disk_running;
+Process printer_running;
+Process tape_running;
+
 Process blank_process;
 
 int main() {
-    srand(time(NULL));          // inicialização para randomizar os números
-    initQueue(&ready_queue);
-    initQueue(&execution_queue);
+    srand(time(NULL));                     // inicialização para randomizar os números
+
     initQueue(&feedback_queue[0]);
+    initQueue(&disk_queue);
+    initQueue(&printer_queue);
+    initQueue(&tape_queue);
+
     blank_process = createProcess();
     blank_process.pid = -1;
+    blank_process.service_time = -1;
+
     cpu_running = blank_process;
+    disk_running = blank_process;
+    printer_running = blank_process;
+    tape_running = blank_process;
 
     clockTimeUnit();
     return 0;
@@ -105,54 +133,204 @@ int main() {
 
 void clockTimeUnit() {
     while(1) {
-        printf("%d -------------------------------------- \n", timer++);
+        printf("------------------ %d ------------------ \n", timer++);
 
         generateProcessesRandomly();
+        runIOs();
+        runCPU();
 
-        // Caso a CPU esteja sem processos
-        if(cpu_running.pid == -1) {
-
-            // Busca processo na fila
-            Process to_execute = dequeue(&feedback_queue[0]);
-
-            // Caso encontre um processo na fila
-            if(to_execute.pid != -1) {
-                cpu_running = to_execute;
-                printf("NOVO PROCESSO NA CPU - %d\n", cpu_running.pid);
-            }
-        }
-
-        // Caso a CPU esteja executando um processo
-        if(cpu_running.pid != -1) {
-            printf("CPU RODANDO PROCESSO %d - QUANTUM %d - MISSING TIME %d\n", cpu_running.pid, unit_time_from_quantum + 1, cpu_running.service_time - cpu_running.current_time);
-            unit_time_from_quantum++;
-
-            cpu_running.current_time++;
-
-            if(cpu_running.current_time == cpu_running.service_time) {
-                printf("PROCESSO TERMINOU\n");
-                cpu_running = blank_process;
-                unit_time_from_quantum = 0;
-            } else if (unit_time_from_quantum == QUANTUM) {
-                printf("\nPREEMPCAO\n\n");
-                enqueue(&feedback_queue[0], cpu_running);
-                cpu_running = blank_process;
-                unit_time_from_quantum = 0;
-            }
-        }
         sleep(1);
     }
 }
 
-/* Gera processos aleatoriamente dada a probabilidade PROBABILTY_FOR_GENERATE_PROCESS*/
+/* Gera processos aleatoriamente dada a probabilidade PROBABILTY_FOR_GENERATE_PROCESS */
 void generateProcessesRandomly() {
     int random_number = generateRandomNumber(0, 100);
     if(random_number < PROBABILTY_FOR_GENERATE_PROCESS) {
         Process new_process = createProcess();
         printf("\nNOVO PROCESSO ENTROU\n", new_process.pid);
-        printf("pid: %d\nppid: %d\nservice time: %d\npriority: %d\nio times: %d\n\n",
+        printf("pid: %d\nppid: %d\nservice time: %d\npriority: %d\nio times: %d\n",
                     new_process.pid, new_process.ppid, new_process.service_time, new_process.priority, new_process.io_req_quantity);
+        for (int i = 0; i < new_process.io_req_quantity; i++)
+        {
+            printf("i: %s - duration: %d - enters in: %d\n", new_process.io[i].type, new_process.io[i].duration, new_process.io[i].req_instant);
+        }
+
+        printf("\n");
+
         enqueue(&feedback_queue[0], new_process);
+    }
+}
+
+void runCPU() {
+    // Caso a CPU esteja sem processos
+    if(cpu_running.pid == -1) {
+
+        // Busca processo na fila
+        Process to_execute = dequeue(&feedback_queue[0]);
+
+        // Caso encontre um processo na fila
+        if(to_execute.pid != -1) {
+            cpu_running = to_execute;
+            printf("NOVO PROCESSO NA CPU - %d\n", cpu_running.pid);
+        } else {
+            printf("CPU OCIOSA\n");
+        }
+    }
+
+    // Caso a CPU esteja executando um processo
+    if(cpu_running.pid != -1) {
+        printf("CPU RODANDO PROCESSO %d - QUANTUM %d - MISSING TIME %d - CURRENT TIME %d\n", cpu_running.pid, unit_time_from_quantum + 1, cpu_running.service_time - cpu_running.current_time, cpu_running.current_time + 1);
+        unit_time_from_quantum++;
+
+        shouldRunIo(cpu_running);
+
+        cpu_running.current_time++;
+
+        if(cpu_running.current_time == cpu_running.service_time) {
+            printf("PROCESSO %d TERMINOU\n", cpu_running.pid);
+            cpu_running = blank_process;
+            unit_time_from_quantum = 0;
+        } else if (unit_time_from_quantum == QUANTUM) {
+            printf("\nPREEMPCAO\n\n");
+            enqueue(&feedback_queue[0], cpu_running);
+            cpu_running = blank_process;
+            unit_time_from_quantum = 0;
+        }
+    }
+}
+
+Io shouldRunIo(Process process) {
+    Io to_run;
+
+    if(process.io_req_remaining > 0) {
+        if(process.io[0].req_instant == process.current_time + 1) {
+            to_run = process.io[0];
+
+            printf("PROCCESSO %d PEDIU O IO %s\n", process.pid, to_run.type);
+            if (strcmp(to_run.type, "DISK") == 0) {
+                printf("NOVO PROCESSO PRO DISCO\n");
+                enqueue(&disk_queue, process);
+                cpu_running = blank_process;
+                unit_time_from_quantum = 0;
+            } else if(strcmp(to_run.type, "TAPE") == 0) {
+                enqueue(&tape_queue, process);
+                cpu_running = blank_process;
+                unit_time_from_quantum = 0;
+            } else if(strcmp(to_run.type, "PRINTER") == 0) {
+                enqueue(&printer_queue, process);
+                cpu_running = blank_process;
+                unit_time_from_quantum = 0;
+            }
+        } else {
+            to_run.duration = -1;
+        }
+    } else {
+        to_run.duration = -1;
+    }
+
+    return to_run;
+}
+
+void runIOs() {
+    run_disk();
+    run_printer();
+    run_tape();
+}
+
+void run_disk() {
+    if(disk_running.pid == -1) {
+        Process to_execute = dequeue(&disk_queue);
+
+        if(to_execute.pid != -1) {
+            disk_running = to_execute;
+            printf("NOVO PROCESSO USANDO DISCO - %d\n", disk_running.pid);
+        } else {
+            printf("DISCO OCIOSO\n");
+        }
+    }
+
+    if(disk_running.pid != -1) {
+        printf("DISCO RODANDO PEDIDO DO PROCESSO %d - MISSING TIME %d - CURRENT TIME %d\n", disk_running.pid, disk_running.io[0].duration - disk_running.io[0].current_time, disk_running.io[0].current_time + 1);
+
+        disk_running.io[0].current_time++;
+
+        if(disk_running.io[0].current_time == disk_running.io[0].duration) {
+            printf("DISCO TERMINOU PEDIDO DO PROCESSO %d\n", disk_running.pid);
+
+            for (int i = 0; i < MAX_IO_REQ - 1; i++) {
+                disk_running.io[i] = disk_running.io[i + 1];
+            }
+
+            disk_running.io_req_remaining--;
+
+            enqueue(&feedback_queue[0], disk_running);
+            disk_running = blank_process;
+        }
+    }
+}
+
+void run_printer() {
+    if(tape_running.pid == -1) {
+        Process to_execute = dequeue(&tape_queue);
+
+        if(to_execute.pid != -1) {
+            tape_running = to_execute;
+            printf("NOVO PROCESSO USANDO FITA - %d\n", tape_running.pid);
+        } else {
+            printf("FITA OCIOSA\n");
+        }
+    }
+
+    if(tape_running.pid != -1) {
+        printf("FITA RODANDO PEDIDO DO PROCESSO %d - MISSING TIME %d - CURRENT TIME %d\n", tape_running.pid, tape_running.io[0].duration - tape_running.io[0].current_time, tape_running.io[0].current_time + 1);
+
+        tape_running.io[0].current_time++;
+
+        if(tape_running.io[0].current_time == tape_running.io[0].duration) {
+            printf("FITA TERMINOU PEDIDO DO PROCESSO %d\n", tape_running.pid);
+
+            for (int i = 0; i < MAX_IO_REQ - 1; i++) {
+                tape_running.io[i] = tape_running.io[i + 1];
+            }
+
+            tape_running.io_req_remaining--;
+
+            enqueue(&feedback_queue[0], tape_running);
+            tape_running = blank_process;
+        }
+    }
+}
+
+void run_tape() {
+    if(printer_running.pid == -1) {
+        Process to_execute = dequeue(&printer_queue);
+
+        if(to_execute.pid != -1) {
+            printer_running = to_execute;
+            printf("NOVO PROCESSO USANDO IMPRESSORA - %d\n", printer_running.pid);
+        } else {
+            printf("IMPRESSORA OCIOSA\n");
+        }
+    }
+
+    if(printer_running.pid != -1) {
+        printf("IMPRESSORA RODANDO PEDIDO DO PROCESSO %d - MISSING TIME %d - CURRENT TIME %d\n", printer_running.pid, printer_running.io[0].duration - printer_running.io[0].current_time, printer_running.io[0].current_time + 1);
+
+        printer_running.io[0].current_time++;
+
+        if(printer_running.io[0].current_time == printer_running.io[0].duration) {
+            printf("IMPRESSORA TERMINOU PEDIDO DO PROCESSO %d\n", printer_running.pid);
+
+            for (int i = 0; i < MAX_IO_REQ - 1; i++) {
+                printer_running.io[i] = printer_running.io[i + 1];
+            }
+
+            printer_running.io_req_remaining--;
+
+            enqueue(&feedback_queue[0], printer_running);
+            printer_running = blank_process;
+        }
     }
 }
 
@@ -186,7 +364,7 @@ void enqueue(ProcessQueue *queue, Process process) {
     indicando que não foi possível fazer a operação */
 Process dequeue(ProcessQueue *queue) {
     if (queue->rear == -1) {
-        printf("Fila vazia! Nao e possivel retirar.\n");
+        //printf("Fila vazia! Nao e possivel retirar.\n");
 
         Process empty;
         empty.pid = -1;
@@ -197,7 +375,6 @@ Process dequeue(ProcessQueue *queue) {
 
         for (int i = 0; i < QUEUE_SIZE - 1; i++) {
             queue->processes[i] = queue->processes[i + 1];
-
         }
 
         queue->rear--;
@@ -291,6 +468,7 @@ void generateIoRequests(Process *process) {
     int possible_next_req_instant = 1;
 
     process->io_req_quantity = 0;
+    process->io_req_remaining = 0;
 
     if (process->service_time > 1) {
         while (process->io_req_quantity < 3 && (process->io_req_quantity == 0 ||
@@ -300,22 +478,24 @@ void generateIoRequests(Process *process) {
 
             if (io_type == 0) {
                 break;
-
             } else if (io_type == 1) {
                 process->io[process->io_req_quantity].duration = DISK_IO_DURATION;
-
+                strcpy(process->io[process->io_req_quantity].type, "DISK");
+                process->io[process->io_req_quantity].current_time = 0;
             } else if (io_type == 2) {
                 process->io[process->io_req_quantity].duration = TAPE_IO_DURATION;
-
+                strcpy(process->io[process->io_req_quantity].type, "TAPE");
+                process->io[process->io_req_quantity].current_time = 0;
             } else if (io_type == 3) {
                 process->io[process->io_req_quantity].duration = PRINTER_IO_DURATION;
-
+                strcpy(process->io[process->io_req_quantity].type, "PRINTER");
+                process->io[process->io_req_quantity].current_time = 0;
             }
 
             process->io[process->io_req_quantity].req_instant = generateRandomNumber(possible_next_req_instant, process->service_time - 1);
             possible_next_req_instant = process->io[process->io_req_quantity].req_instant + 1;
             process->io_req_quantity++;
-
+            process->io_req_remaining++;
         }
 
     }
