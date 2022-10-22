@@ -20,7 +20,7 @@
 #define MAX_PID 9999
 #define MIN_PID 1000
 #define MAX_SERVICE_TIME 20
-#define MIN_SERVICE_TIME 1
+#define MIN_SERVICE_TIME 2
 #define INITIAL_PRIORITY 0
 #define MAX_IO_REQ 3
 
@@ -31,11 +31,11 @@
 
 /* constantes para o trabalho do escalonador */
 #define QUEUE_SIZE 20
-#define QUEUES_NUMBER 3
+#define QUEUES_NUMBER 2     // 2 filas: alta e baixa prioridade
 #define QUANTUM 5
 
 /* probabilidade de gerar um processo por clock (em %) */
-#define PROBABILTY_FOR_GENERATE_PROCESS 10
+#define PROBABILTY_FOR_GENERATE_PROCESS 20
 
 /* struct de io que o processo precisa para pedir vários */
 typedef struct {
@@ -87,6 +87,7 @@ void generateIoRequests(Process *process);
 void destroyProcess(Process process);
 
 int generateRandomNumber(int lower_limit, int upper_limit);
+void printQueues();
 void generateProcessesRandomly();
 void runCPU();
 Io shouldRunIo();
@@ -111,9 +112,14 @@ Process tape_running;
 Process blank_process;
 
 int main() {
-    srand(time(NULL));                     // inicialização para randomizar os números
+    srand(time(NULL));                      // inicialização para randomizar os números
 
-    initQueue(&feedback_queue[0]);
+    for (int i = 0; i < QUEUES_NUMBER; i++)
+    {
+        initQueue(&feedback_queue[i]);
+    }
+
+    // Filas diferentes para cada tipo de dispositivo
     initQueue(&disk_queue);
     initQueue(&printer_queue);
     initQueue(&tape_queue);
@@ -133,9 +139,12 @@ int main() {
 
 void clockTimeUnit() {
     while(1) {
-        printf("------------------ %d ------------------ \n", timer++);
+        printf("\n------------------ %d ------------------ \n", timer++);
 
         generateProcessesRandomly();
+
+        printQueues();
+
         runIOs();
         runCPU();
 
@@ -143,21 +152,77 @@ void clockTimeUnit() {
     }
 }
 
+void printQueues() {
+    printf("Fila de Prontos\n");
+
+    printf("Prioridade Alta [ ");
+
+    // printf("rear %d\n", feedback_queue[0].rear);
+    for (int i = 0; i < feedback_queue[0].rear + 1; i++)
+    {
+        printf("%d ", feedback_queue[0].processes[i]);
+    }
+
+    printf("]\n");
+
+    printf("Prioridade Baixa [ ");
+
+    // printf("rear %d\n", feedback_queue[0].rear);
+    for (int i = 0; i < feedback_queue[QUEUES_NUMBER - 1].rear + 1; i++)
+    {
+        printf("%d ", feedback_queue[QUEUES_NUMBER - 1].processes[i]);
+    }
+
+    printf("]\n");
+
+    printf("\n");
+
+    printf("Fila de Bloqueados - Aguardando DISCO [ ");
+
+    for (int i = 0; i < disk_queue.rear + 1; i++)
+    {
+        printf("%d ", disk_queue.processes[i]);
+    }
+
+    printf("]\n");
+
+    printf("Fila de Bloqueados - Aguardando FITA [ ");
+
+    for (int i = 0; i < tape_queue.rear + 1; i++)
+    {
+        printf("%d ", tape_queue.processes[i]);
+    }
+
+    printf("]\n");
+
+    printf("Fila de Bloqueados - Aguardando IMPRESSORA [ ");
+
+    for (int i = 0; i < printer_queue.rear + 1; i++)
+    {
+        printf("%d ", printer_queue.processes[i]);
+    }
+
+    printf("]\n");
+
+    printf("\n");
+}
+
 /* Gera processos aleatoriamente dada a probabilidade PROBABILTY_FOR_GENERATE_PROCESS */
 void generateProcessesRandomly() {
     int random_number = generateRandomNumber(0, 100);
     if(random_number < PROBABILTY_FOR_GENERATE_PROCESS) {
         Process new_process = createProcess();
-        printf("\nNOVO PROCESSO ENTROU\n", new_process.pid);
-        printf("pid: %d\nppid: %d\nservice time: %d\npriority: %d\nio times: %d\n",
-                    new_process.pid, new_process.ppid, new_process.service_time, new_process.priority, new_process.io_req_quantity);
+        printf("\nNovo Processo\n", new_process.pid);
+        printf("PID: %d\nPPID: %d\nTempo de Servico: %d\nVezes que pede IO: %d\n",
+                    new_process.pid, new_process.ppid, new_process.service_time, new_process.io_req_quantity);
         for (int i = 0; i < new_process.io_req_quantity; i++)
         {
-            printf("i: %s - duration: %d - enters in: %d\n", new_process.io[i].type, new_process.io[i].duration, new_process.io[i].req_instant);
+            printf("IO: %s - Duracao: %d - Pedido no instante de tempo: %d\n", new_process.io[i].type, new_process.io[i].duration, new_process.io[i].req_instant);
         }
 
         printf("\n");
 
+        // Processos novos - entram na fila de alta prioridade;
         enqueue(&feedback_queue[0], new_process);
     }
 }
@@ -166,34 +231,48 @@ void runCPU() {
     // Caso a CPU esteja sem processos
     if(cpu_running.pid == -1) {
 
+        Process to_execute;
+
         // Busca processo na fila
-        Process to_execute = dequeue(&feedback_queue[0]);
+        for (int i = 0; i < QUEUES_NUMBER; i++)
+        {
+            to_execute = dequeue(&feedback_queue[i]);
+
+            if(to_execute.pid != -1) {
+                break;
+            }
+        }
 
         // Caso encontre um processo na fila
         if(to_execute.pid != -1) {
             cpu_running = to_execute;
-            printf("NOVO PROCESSO NA CPU - %d\n", cpu_running.pid);
+            printf("Novo processo executando na CPU - %d\n", cpu_running.pid);
         } else {
-            printf("CPU OCIOSA\n");
+            printf("CPU ociosa\n");
         }
     }
 
     // Caso a CPU esteja executando um processo
     if(cpu_running.pid != -1) {
-        printf("CPU RODANDO PROCESSO %d - QUANTUM %d - MISSING TIME %d - CURRENT TIME %d\n", cpu_running.pid, unit_time_from_quantum + 1, cpu_running.service_time - cpu_running.current_time, cpu_running.current_time + 1);
+        cpu_running.current_time++;
+
+        printf("CPU rodando processo %d - Quantum %d - Tempo restante %d - Tempo executado %d\n", cpu_running.pid, unit_time_from_quantum + 1, cpu_running.service_time - cpu_running.current_time, cpu_running.current_time);
         unit_time_from_quantum++;
 
         shouldRunIo(cpu_running);
 
-        cpu_running.current_time++;
+
 
         if(cpu_running.current_time == cpu_running.service_time) {
-            printf("PROCESSO %d TERMINOU\n", cpu_running.pid);
+            printf("Processo %d Terminou\n", cpu_running.pid);
             cpu_running = blank_process;
             unit_time_from_quantum = 0;
         } else if (unit_time_from_quantum == QUANTUM) {
-            printf("\nPREEMPCAO\n\n");
-            enqueue(&feedback_queue[0], cpu_running);
+            printf("\nPreempcao\n\n");
+
+            // Processos que sofreram preempção – retornam na fila de baixa prioridade.
+            enqueue(&feedback_queue[QUEUES_NUMBER-1], cpu_running);
+
             cpu_running = blank_process;
             unit_time_from_quantum = 0;
         }
@@ -204,12 +283,11 @@ Io shouldRunIo(Process process) {
     Io to_run;
 
     if(process.io_req_remaining > 0) {
-        if(process.io[0].req_instant == process.current_time + 1) {
+        if(process.io[0].req_instant == process.current_time) {
             to_run = process.io[0];
 
-            printf("PROCCESSO %d PEDIU O IO %s\n", process.pid, to_run.type);
+            printf("Processo %d pediu o IO %s\n", process.pid, to_run.type);
             if (strcmp(to_run.type, "DISK") == 0) {
-                printf("NOVO PROCESSO PRO DISCO\n");
                 enqueue(&disk_queue, process);
                 cpu_running = blank_process;
                 unit_time_from_quantum = 0;
@@ -244,19 +322,19 @@ void run_disk() {
 
         if(to_execute.pid != -1) {
             disk_running = to_execute;
-            printf("NOVO PROCESSO USANDO DISCO - %d\n", disk_running.pid);
+            printf("Novo processo usando o DISCO - %d\n", disk_running.pid);
         } else {
-            printf("DISCO OCIOSO\n");
+            printf("DISCO ocioso\n");
         }
     }
 
     if(disk_running.pid != -1) {
-        printf("DISCO RODANDO PEDIDO DO PROCESSO %d - MISSING TIME %d - CURRENT TIME %d\n", disk_running.pid, disk_running.io[0].duration - disk_running.io[0].current_time, disk_running.io[0].current_time + 1);
-
         disk_running.io[0].current_time++;
 
+        printf("DISCO rodando pedido do processo %d - Tempo restante %d - Tempo executado %d\n", disk_running.pid, disk_running.io[0].duration - disk_running.io[0].current_time, disk_running.io[0].current_time);
+
         if(disk_running.io[0].current_time == disk_running.io[0].duration) {
-            printf("DISCO TERMINOU PEDIDO DO PROCESSO %d\n", disk_running.pid);
+            printf("DISCO terminou o pedido do processo %d\n", disk_running.pid);
 
             for (int i = 0; i < MAX_IO_REQ - 1; i++) {
                 disk_running.io[i] = disk_running.io[i + 1];
@@ -264,7 +342,9 @@ void run_disk() {
 
             disk_running.io_req_remaining--;
 
-            enqueue(&feedback_queue[0], disk_running);
+            // Disco – retorna para a fila de baixa prioridade
+            enqueue(&feedback_queue[QUEUES_NUMBER - 1], disk_running);
+
             disk_running = blank_process;
         }
     }
@@ -276,19 +356,19 @@ void run_printer() {
 
         if(to_execute.pid != -1) {
             tape_running = to_execute;
-            printf("NOVO PROCESSO USANDO FITA - %d\n", tape_running.pid);
+            printf("Novo processo usando FITA - %d\n", tape_running.pid);
         } else {
-            printf("FITA OCIOSA\n");
+            printf("FITA ociosa\n");
         }
     }
 
     if(tape_running.pid != -1) {
-        printf("FITA RODANDO PEDIDO DO PROCESSO %d - MISSING TIME %d - CURRENT TIME %d\n", tape_running.pid, tape_running.io[0].duration - tape_running.io[0].current_time, tape_running.io[0].current_time + 1);
-
         tape_running.io[0].current_time++;
 
+        printf("FITA rodando pedido do processo %d - Tempo restante %d - Tempo executado %d\n", tape_running.pid, tape_running.io[0].duration - tape_running.io[0].current_time, tape_running.io[0].current_time);
+
         if(tape_running.io[0].current_time == tape_running.io[0].duration) {
-            printf("FITA TERMINOU PEDIDO DO PROCESSO %d\n", tape_running.pid);
+            printf("FITA terminou o pedido do processo %d\n", tape_running.pid);
 
             for (int i = 0; i < MAX_IO_REQ - 1; i++) {
                 tape_running.io[i] = tape_running.io[i + 1];
@@ -296,7 +376,9 @@ void run_printer() {
 
             tape_running.io_req_remaining--;
 
+            // Impressora - retorna para a fila de alta prioridade
             enqueue(&feedback_queue[0], tape_running);
+
             tape_running = blank_process;
         }
     }
@@ -308,19 +390,19 @@ void run_tape() {
 
         if(to_execute.pid != -1) {
             printer_running = to_execute;
-            printf("NOVO PROCESSO USANDO IMPRESSORA - %d\n", printer_running.pid);
+            printf("Novo processo usando IMPRESSORA - %d\n", printer_running.pid);
         } else {
-            printf("IMPRESSORA OCIOSA\n");
+            printf("IMPRESSORA ociosa\n");
         }
     }
 
     if(printer_running.pid != -1) {
-        printf("IMPRESSORA RODANDO PEDIDO DO PROCESSO %d - MISSING TIME %d - CURRENT TIME %d\n", printer_running.pid, printer_running.io[0].duration - printer_running.io[0].current_time, printer_running.io[0].current_time + 1);
-
         printer_running.io[0].current_time++;
 
+        printf("IMPRESSORA rodando pedido do processo %d - Tempo restante %d - Tempo executado %d\n", printer_running.pid, printer_running.io[0].duration - printer_running.io[0].current_time, printer_running.io[0].current_time);
+
         if(printer_running.io[0].current_time == printer_running.io[0].duration) {
-            printf("IMPRESSORA TERMINOU PEDIDO DO PROCESSO %d\n", printer_running.pid);
+            printf("IMPRESSORA terminou o pedido do processo %d\n", printer_running.pid);
 
             for (int i = 0; i < MAX_IO_REQ - 1; i++) {
                 printer_running.io[i] = printer_running.io[i + 1];
@@ -328,7 +410,9 @@ void run_tape() {
 
             printer_running.io_req_remaining--;
 
+            // Fita magnética - retorna para a fila de alta prioridade
             enqueue(&feedback_queue[0], printer_running);
+
             printer_running = blank_process;
         }
     }
