@@ -160,7 +160,7 @@ void printQueues() {
     // printf("rear %d\n", feedback_queue[0].rear);
     for (int i = 0; i < feedback_queue[0].rear + 1; i++)
     {
-        printf("%d ", feedback_queue[0].processes[i]);
+        printf("%d ", feedback_queue[0].processes[i].pid);
     }
 
     printf("]\n");
@@ -170,7 +170,7 @@ void printQueues() {
     // printf("rear %d\n", feedback_queue[0].rear);
     for (int i = 0; i < feedback_queue[QUEUES_NUMBER - 1].rear + 1; i++)
     {
-        printf("%d ", feedback_queue[QUEUES_NUMBER - 1].processes[i]);
+        printf("%d ", feedback_queue[QUEUES_NUMBER - 1].processes[i].pid);
     }
 
     printf("]\n");
@@ -181,7 +181,7 @@ void printQueues() {
 
     for (int i = 0; i < disk_queue.rear + 1; i++)
     {
-        printf("%d ", disk_queue.processes[i]);
+        printf("%d ", disk_queue.processes[i].pid);
     }
 
     printf("]\n");
@@ -190,7 +190,7 @@ void printQueues() {
 
     for (int i = 0; i < tape_queue.rear + 1; i++)
     {
-        printf("%d ", tape_queue.processes[i]);
+        printf("%d ", tape_queue.processes[i].pid);
     }
 
     printf("]\n");
@@ -199,7 +199,7 @@ void printQueues() {
 
     for (int i = 0; i < printer_queue.rear + 1; i++)
     {
-        printf("%d ", printer_queue.processes[i]);
+        printf("%d ", printer_queue.processes[i].pid);
     }
 
     printf("]\n");
@@ -212,7 +212,7 @@ void generateProcessesRandomly() {
     int random_number = generateRandomNumber(0, 100);
     if(random_number < PROBABILTY_FOR_GENERATE_PROCESS) {
         Process new_process = createProcess();
-        printf("\nNovo Processo\n", new_process.pid);
+        printf("\nNovo Processo\n");
         printf("PID: %d\nPPID: %d\nTempo de Servico: %d\nVezes que pede IO: %d\n",
                     new_process.pid, new_process.ppid, new_process.service_time, new_process.io_req_quantity);
         for (int i = 0; i < new_process.io_req_quantity; i++)
