@@ -1,0 +1,1459 @@
+
+------------------ 0 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 1 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 2 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 3 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 4 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 5 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 6 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 7 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 8 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 9 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 10 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 11 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 12 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 13 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU ociosa
+
+------------------ 14 ------------------
+
+Novo Processo
+PID: 7794
+PPID: 99
+Tempo de Servico: 20
+Vezes que pede IO: 1
+IO: PRINTER - Duracao: 14 - Pedido no instante de tempo: 17
+
+Fila de Prontos
+Prioridade Alta [ 7794 ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 7794
+CPU rodando processo 7794 - Quantum 1 - Tempo restante 19 - Tempo executado 1
+
+------------------ 15 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 2 - Tempo restante 18 - Tempo executado 2
+
+------------------ 16 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 3 - Tempo restante 17 - Tempo executado 3
+
+------------------ 17 ------------------
+
+Novo Processo
+PID: 8955
+PPID: 99
+Tempo de Servico: 18
+Vezes que pede IO: 0
+
+Fila de Prontos
+Prioridade Alta [ 8955 ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 4 - Tempo restante 16 - Tempo executado 4
+
+------------------ 18 ------------------
+Fila de Prontos
+Prioridade Alta [ 8955 ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 5 - Tempo restante 15 - Tempo executado 5
+
+Preempcao
+
+
+------------------ 19 ------------------
+
+Novo Processo
+PID: 1613
+PPID: 99
+Tempo de Servico: 6
+Vezes que pede IO: 2
+IO: DISK - Duracao: 5 - Pedido no instante de tempo: 1
+IO: DISK - Duracao: 5 - Pedido no instante de tempo: 2
+
+Fila de Prontos
+Prioridade Alta [ 8955 1613 ]
+Prioridade Baixa [ 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 8955
+CPU rodando processo 8955 - Quantum 1 - Tempo restante 17 - Tempo executado 1
+
+------------------ 20 ------------------
+Fila de Prontos
+Prioridade Alta [ 1613 ]
+Prioridade Baixa [ 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 2 - Tempo restante 16 - Tempo executado 2
+
+------------------ 21 ------------------
+Fila de Prontos
+Prioridade Alta [ 1613 ]
+Prioridade Baixa [ 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 3 - Tempo restante 15 - Tempo executado 3
+
+------------------ 22 ------------------
+
+Novo Processo
+PID: 3529
+PPID: 99
+Tempo de Servico: 17
+Vezes que pede IO: 3
+IO: TAPE - Duracao: 8 - Pedido no instante de tempo: 1
+IO: TAPE - Duracao: 8 - Pedido no instante de tempo: 5
+IO: DISK - Duracao: 5 - Pedido no instante de tempo: 13
+
+Fila de Prontos
+Prioridade Alta [ 1613 3529 ]
+Prioridade Baixa [ 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 4 - Tempo restante 14 - Tempo executado 4
+
+------------------ 23 ------------------
+Fila de Prontos
+Prioridade Alta [ 1613 3529 ]
+Prioridade Baixa [ 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 5 - Tempo restante 13 - Tempo executado 5
+
+Preempcao
+
+
+------------------ 24 ------------------
+
+Novo Processo
+PID: 4903
+PPID: 99
+Tempo de Servico: 20
+Vezes que pede IO: 0
+
+Fila de Prontos
+Prioridade Alta [ 1613 3529 4903 ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 1613
+CPU rodando processo 1613 - Quantum 1 - Tempo restante 5 - Tempo executado 1
+Processo 1613 pediu o IO DISK
+
+------------------ 25 ------------------
+Fila de Prontos
+Prioridade Alta [ 3529 4903 ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ 1613 ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+Novo processo usando o DISCO - 1613
+DISCO rodando pedido do processo 1613 - Tempo restante 4 - Tempo executado 1
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 3529
+CPU rodando processo 3529 - Quantum 1 - Tempo restante 16 - Tempo executado 1
+Processo 3529 pediu o IO TAPE
+
+------------------ 26 ------------------
+Fila de Prontos
+Prioridade Alta [ 4903 ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ 3529 ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 1613 - Tempo restante 3 - Tempo executado 2
+Novo processo usando FITA - 3529
+FITA rodando pedido do processo 3529 - Tempo restante 7 - Tempo executado 1
+IMPRESSORA ociosa
+Novo processo executando na CPU - 4903
+CPU rodando processo 4903 - Quantum 1 - Tempo restante 19 - Tempo executado 1
+
+------------------ 27 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 1613 - Tempo restante 2 - Tempo executado 3
+FITA rodando pedido do processo 3529 - Tempo restante 6 - Tempo executado 2
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 2 - Tempo restante 18 - Tempo executado 2
+
+------------------ 28 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 1613 - Tempo restante 1 - Tempo executado 4
+FITA rodando pedido do processo 3529 - Tempo restante 5 - Tempo executado 3
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 3 - Tempo restante 17 - Tempo executado 3
+
+------------------ 29 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 1613 - Tempo restante 0 - Tempo executado 5
+DISCO terminou o pedido do processo 1613
+FITA rodando pedido do processo 3529 - Tempo restante 4 - Tempo executado 4
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 4 - Tempo restante 16 - Tempo executado 4
+
+------------------ 30 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 1613 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 3 - Tempo executado 5
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 5 - Tempo restante 15 - Tempo executado 5
+
+Preempcao
+
+
+------------------ 31 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 2 - Tempo executado 6
+IMPRESSORA ociosa
+Novo processo executando na CPU - 7794
+CPU rodando processo 7794 - Quantum 1 - Tempo restante 14 - Tempo executado 6
+
+------------------ 32 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 1 - Tempo executado 7
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 2 - Tempo restante 13 - Tempo executado 7
+
+------------------ 33 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 0 - Tempo executado 8
+FITA terminou o pedido do processo 3529
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 3 - Tempo restante 12 - Tempo executado 8
+
+------------------ 34 ------------------
+Fila de Prontos
+Prioridade Alta [ 3529 ]
+Prioridade Baixa [ 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 4 - Tempo restante 11 - Tempo executado 9
+
+------------------ 35 ------------------
+Fila de Prontos
+Prioridade Alta [ 3529 ]
+Prioridade Baixa [ 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 5 - Tempo restante 10 - Tempo executado 10
+
+Preempcao
+
+
+------------------ 36 ------------------
+Fila de Prontos
+Prioridade Alta [ 3529 ]
+Prioridade Baixa [ 8955 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 3529
+CPU rodando processo 3529 - Quantum 1 - Tempo restante 15 - Tempo executado 2
+
+------------------ 37 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 2 - Tempo restante 14 - Tempo executado 3
+
+------------------ 38 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 3 - Tempo restante 13 - Tempo executado 4
+
+------------------ 39 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 4 - Tempo restante 12 - Tempo executado 5
+Processo 3529 pediu o IO TAPE
+
+------------------ 40 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ 3529 ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+Novo processo usando FITA - 3529
+FITA rodando pedido do processo 3529 - Tempo restante 7 - Tempo executado 1
+IMPRESSORA ociosa
+Novo processo executando na CPU - 8955
+CPU rodando processo 8955 - Quantum 1 - Tempo restante 12 - Tempo executado 6
+
+------------------ 41 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 6 - Tempo executado 2
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 2 - Tempo restante 11 - Tempo executado 7
+
+------------------ 42 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 5 - Tempo executado 3
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 3 - Tempo restante 10 - Tempo executado 8
+
+------------------ 43 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 4 - Tempo executado 4
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 4 - Tempo restante 9 - Tempo executado 9
+
+------------------ 44 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 3 - Tempo executado 5
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 5 - Tempo restante 8 - Tempo executado 10
+
+Preempcao
+
+
+------------------ 45 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA rodando pedido do processo 3529 - Tempo restante 2 - Tempo executado 6
+IMPRESSORA ociosa
+Novo processo executando na CPU - 1613
+CPU rodando processo 1613 - Quantum 1 - Tempo restante 4 - Tempo executado 2
+Processo 1613 pediu o IO DISK
+
+------------------ 46 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 4903 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ 1613 ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+Novo processo usando o DISCO - 1613
+DISCO rodando pedido do processo 1613 - Tempo restante 4 - Tempo executado 1
+FITA rodando pedido do processo 3529 - Tempo restante 1 - Tempo executado 7
+IMPRESSORA ociosa
+Novo processo executando na CPU - 4903
+CPU rodando processo 4903 - Quantum 1 - Tempo restante 14 - Tempo executado 6
+
+------------------ 47 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 1613 - Tempo restante 3 - Tempo executado 2
+FITA rodando pedido do processo 3529 - Tempo restante 0 - Tempo executado 8
+FITA terminou o pedido do processo 3529
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 2 - Tempo restante 13 - Tempo executado 7
+
+------------------ 48 ------------------
+Fila de Prontos
+Prioridade Alta [ 3529 ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 1613 - Tempo restante 2 - Tempo executado 3
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 3 - Tempo restante 12 - Tempo executado 8
+
+------------------ 49 ------------------
+Fila de Prontos
+Prioridade Alta [ 3529 ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 1613 - Tempo restante 1 - Tempo executado 4
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 4 - Tempo restante 11 - Tempo executado 9
+
+------------------ 50 ------------------
+Fila de Prontos
+Prioridade Alta [ 3529 ]
+Prioridade Baixa [ 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 1613 - Tempo restante 0 - Tempo executado 5
+DISCO terminou o pedido do processo 1613
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 5 - Tempo restante 10 - Tempo executado 10
+
+Preempcao
+
+
+------------------ 51 ------------------
+Fila de Prontos
+Prioridade Alta [ 3529 ]
+Prioridade Baixa [ 7794 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 3529
+CPU rodando processo 3529 - Quantum 1 - Tempo restante 11 - Tempo executado 6
+
+------------------ 52 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 2 - Tempo restante 10 - Tempo executado 7
+
+------------------ 53 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 3 - Tempo restante 9 - Tempo executado 8
+
+------------------ 54 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 4 - Tempo restante 8 - Tempo executado 9
+
+------------------ 55 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 1613 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 5 - Tempo restante 7 - Tempo executado 10
+
+Preempcao
+
+
+------------------ 56 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 1613 4903 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 7794
+CPU rodando processo 7794 - Quantum 1 - Tempo restante 9 - Tempo executado 11
+
+------------------ 57 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 2 - Tempo restante 8 - Tempo executado 12
+
+------------------ 58 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 3 - Tempo restante 7 - Tempo executado 13
+
+------------------ 59 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 4 - Tempo restante 6 - Tempo executado 14
+
+------------------ 60 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 5 - Tempo restante 5 - Tempo executado 15
+
+Preempcao
+
+
+------------------ 61 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 1613 4903 3529 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 8955
+CPU rodando processo 8955 - Quantum 1 - Tempo restante 7 - Tempo executado 11
+
+------------------ 62 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 3529 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 2 - Tempo restante 6 - Tempo executado 12
+
+------------------ 63 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 3529 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 3 - Tempo restante 5 - Tempo executado 13
+
+------------------ 64 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 3529 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 4 - Tempo restante 4 - Tempo executado 14
+
+------------------ 65 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 3529 7794 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 8955 - Quantum 5 - Tempo restante 3 - Tempo executado 15
+
+Preempcao
+
+
+------------------ 66 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 1613 4903 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 1613
+CPU rodando processo 1613 - Quantum 1 - Tempo restante 3 - Tempo executado 3
+
+------------------ 67 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 4903 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 1613 - Quantum 2 - Tempo restante 2 - Tempo executado 4
+
+------------------ 68 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 4903 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 1613 - Quantum 3 - Tempo restante 1 - Tempo executado 5
+
+------------------ 69 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 4903 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 1613 - Quantum 4 - Tempo restante 0 - Tempo executado 6
+Processo 1613 Terminou
+
+------------------ 70 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 4903 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 4903
+CPU rodando processo 4903 - Quantum 1 - Tempo restante 9 - Tempo executado 11
+
+------------------ 71 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 2 - Tempo restante 8 - Tempo executado 12
+
+------------------ 72 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 3 - Tempo restante 7 - Tempo executado 13
+
+------------------ 73 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 4 - Tempo restante 6 - Tempo executado 14
+
+------------------ 74 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 7794 8955 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 4903 - Quantum 5 - Tempo restante 5 - Tempo executado 15
+
+Preempcao
+
+
+------------------ 75 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 7794 8955 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 3529
+CPU rodando processo 3529 - Quantum 1 - Tempo restante 6 - Tempo executado 11
+
+------------------ 76 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 2 - Tempo restante 5 - Tempo executado 12
+
+------------------ 77 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 3529 - Quantum 3 - Tempo restante 4 - Tempo executado 13
+Processo 3529 pediu o IO DISK
+
+------------------ 78 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 7794 8955 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ 3529 ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+Novo processo usando o DISCO - 3529
+DISCO rodando pedido do processo 3529 - Tempo restante 4 - Tempo executado 1
+FITA ociosa
+IMPRESSORA ociosa
+Novo processo executando na CPU - 7794
+CPU rodando processo 7794 - Quantum 1 - Tempo restante 4 - Tempo executado 16
+
+------------------ 79 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 3529 - Tempo restante 3 - Tempo executado 2
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 2 - Tempo restante 3 - Tempo executado 17
+Processo 7794 pediu o IO PRINTER
+
+------------------ 80 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 8955 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ 7794 ]
+
+DISCO rodando pedido do processo 3529 - Tempo restante 2 - Tempo executado 3
+FITA ociosa
+Novo processo usando IMPRESSORA - 7794
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 13 - Tempo executado 1
+Novo processo executando na CPU - 8955
+CPU rodando processo 8955 - Quantum 1 - Tempo restante 2 - Tempo executado 16
+
+------------------ 81 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 3529 - Tempo restante 1 - Tempo executado 4
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 12 - Tempo executado 2
+CPU rodando processo 8955 - Quantum 2 - Tempo restante 1 - Tempo executado 17
+
+------------------ 82 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 4903 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO rodando pedido do processo 3529 - Tempo restante 0 - Tempo executado 5
+DISCO terminou o pedido do processo 3529
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 11 - Tempo executado 3
+CPU rodando processo 8955 - Quantum 3 - Tempo restante 0 - Tempo executado 18
+Processo 8955 Terminou
+
+------------------ 83 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 4903 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 10 - Tempo executado 4
+Novo processo executando na CPU - 4903
+CPU rodando processo 4903 - Quantum 1 - Tempo restante 4 - Tempo executado 16
+
+------------------ 84 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 9 - Tempo executado 5
+CPU rodando processo 4903 - Quantum 2 - Tempo restante 3 - Tempo executado 17
+
+------------------ 85 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 8 - Tempo executado 6
+CPU rodando processo 4903 - Quantum 3 - Tempo restante 2 - Tempo executado 18
+
+------------------ 86 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 7 - Tempo executado 7
+CPU rodando processo 4903 - Quantum 4 - Tempo restante 1 - Tempo executado 19
+
+------------------ 87 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 6 - Tempo executado 8
+CPU rodando processo 4903 - Quantum 5 - Tempo restante 0 - Tempo executado 20
+Processo 4903 Terminou
+
+------------------ 88 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ 3529 ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 5 - Tempo executado 9
+Novo processo executando na CPU - 3529
+CPU rodando processo 3529 - Quantum 1 - Tempo restante 3 - Tempo executado 14
+
+------------------ 89 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 4 - Tempo executado 10
+CPU rodando processo 3529 - Quantum 2 - Tempo restante 2 - Tempo executado 15
+
+------------------ 90 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 3 - Tempo executado 11
+CPU rodando processo 3529 - Quantum 3 - Tempo restante 1 - Tempo executado 16
+
+------------------ 91 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 2 - Tempo executado 12
+CPU rodando processo 3529 - Quantum 4 - Tempo restante 0 - Tempo executado 17
+Processo 3529 Terminou
+
+------------------ 92 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 1 - Tempo executado 13
+CPU ociosa
+
+------------------ 93 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA rodando pedido do processo 7794 - Tempo restante 0 - Tempo executado 14
+IMPRESSORA terminou o pedido do processo 7794
+Novo processo executando na CPU - 7794
+CPU rodando processo 7794 - Quantum 1 - Tempo restante 2 - Tempo executado 18
+
+------------------ 94 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 2 - Tempo restante 1 - Tempo executado 19
+
+------------------ 95 ------------------
+Fila de Prontos
+Prioridade Alta [ ]
+Prioridade Baixa [ ]
+
+Fila de Bloqueados - Aguardando DISCO [ ]
+Fila de Bloqueados - Aguardando FITA [ ]
+Fila de Bloqueados - Aguardando IMPRESSORA [ ]
+
+DISCO ocioso
+FITA ociosa
+IMPRESSORA ociosa
+CPU rodando processo 7794 - Quantum 3 - Tempo restante 0 - Tempo executado 20
+Processo 7794 Terminou
